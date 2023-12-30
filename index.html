@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Recipe Catalogue</title>
+    <link rel="shortcut icon" href="https://blinkit.com/images/faviconChange.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Header section -->
+    <header>
+        <nav class="navbar navbar-light bg-white container" id="desktop-nav">
+            <div class="container-fluid">
+                <a class="navbar-brand"><img src="./assets/logo.svg" alt="logo" class="logo"></a>
+                <div class="d-flex nav-links">
+
+                    <a class="nav-link active home-link" aria-current="page" href="#">Home</a>
+
+                    <a class="nav-link" href="#">Explore</a>
+
+                    <a class="nav-link" href="#">Help</a>
+                    <a><img src="./assets/profile.svg" alt="profile" class="profile"></a>
+
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- mobile navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white" id="mobile-nav">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="./assets/logo.svg"></a>
+
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#">Explore</a>
+                        <a class="nav-link" href="#">Help</a>
+                        <a><img src="./assets/profile.svg" alt="profile" class="profile"></a>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Catalogue background image container -->
+        <section class="p-4">
+
+            <div class="background-img-container">
+                <p class="bg-description"><img src="./assets/background-content.svg"></p>
+
+            </div>
+            <!-- <img src="./assets/bg-img.svg" alt="background"> -->
+
+        </section>
+
+        <!-- Search For Recipes container -->
+
+        <section id="search-section">
+            <h1>Search For Recipes</h1>
+            <div class="search" id="search-container">
+
+                <input type="text" id="search" placeholder="Search for recipes...">
+                <img class="search-button" src="./assets/search-icon.svg" alt="search-icon">
+
+
+            </div>
+
+        </section>
+
+        <!-- Buttons container -->
+        <section class="filters-container">
+
+            <div id="filters">
+                <button class="all-recipes-btn" onclick="filterRecipes('all')">All Recipes <img class="icon"
+                        src="./assets/button.svg"></button>
+                <button class="veg-recipes-btn" onclick="filterRecipes('veg')">Veg Recipes Only <img class="icon"
+                        src="./assets/button.svg"></button>
+                <button class="non-veg-btn" onclick="filterRecipes('non-veg')">Non Veg Recipes <img class="icon"
+                        src="./assets/button.svg"> </button>
+            </div>
+
+        </section>
+
+        <!-- Main section -->
+        <section id="main-section">
+            <div id="rating-filters">
+                <h1 class="filter-heading">Filters</h1>
+                <h6 class="">Rating</h6>
+                <div class="rating-label">
+                    <label><input type="checkbox" name="rating" onclick="filterByRating('above')"> 4 and Above </label>
+                    <label><input type="checkbox" name="rating" onclick="filterByRating('below')"> Below 4</label>
+                </div>
+            </div>
+
+            <div id="recipes-container">
+
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container">
+
+        <div class="container-one">
+
+            <div>
+                <img src="./assets/logo.svg" alt="logo">
+
+                <div class="content">
+                    <p>Cookpal is a recipe website with a wide variety of delicious recipes, easy-to-use search
+                        function. Join
+                        our community and let's cook together!</p>
+                </div>
+
+            </div>
+
+            <div class="div-footer">
+                <h1>Company</h1>
+                <div class="">
+                    <h1>Home</h1>
+                    <h1>Explore</h1>
+                    <h1>Team</h1>
+                    <h1>About us</h1>
+                    <h1>Activity</h1>
+                </div>
+
+
+            </div>
+
+            <div class="div-footer">
+                <h1>Resources</h1>
+                <div>
+                    <h1>Blog</h1>
+                    <h1>Use Cases</h1>
+                    <h1>Testimonials</h1>
+                    <h1>About us</h1>
+                    <h1>Insights</h1>
+                </div>
+
+
+            </div>
+
+            <div class="div-footer">
+                <img src="./assets/logo.svg" alt="logo">
+                <div class="">
+                    <p class="">Ut risus mattis interdum faucibus facilisi. Facilisi purus accumsan aliquam.</p>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+        <div id="social-links">
+            <div class="social_icon"><img src="./assets/instagram.svg"></div>
+            <div class="social_icon"><img src="./assets/twitter.svg"></div>
+            <div class="social_icon"><img src="./assets/linkedin.svg"></div>
+            <div class="social_icon">
+                <img src="./assets/facebook.svg">
+            </div>
+        </div>
+
+
+
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
